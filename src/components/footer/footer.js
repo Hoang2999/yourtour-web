@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./footer.css";
-import "./grid.css";
+import "../grid.css";
 
 export default class Footer extends Component {
   render() {
@@ -96,9 +96,9 @@ export default class Footer extends Component {
           </div>
         </div>
         <div className="footer__bottom">
-            <div className="grid wide footer__text">
-                <p>© 2021 | Withlocals | Privacy</p>
-            </div>
+          <div className="grid wide footer__text">
+            <p>© 2021 | Withlocals | Privacy</p>
+          </div>
         </div>
       </footer>
     );

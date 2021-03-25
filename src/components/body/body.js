@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./body.css";
-import "./grid.css";
+import "../grid.css";
 
 export default class Body extends Component {
   render() {

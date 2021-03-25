@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./header.css";
-import "./grid.css";
+import "../grid.css";
 
 export default class Header extends Component {
   constructor(props) {
