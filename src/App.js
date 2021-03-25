@@ -15,8 +15,9 @@ function App() {
         <Footer />
       </div>
       <div className="modal">
-        <Register />
-        <Login />
+        <div className="modal__overlay"></div>
+          {/* <Register /> */}
+          {/* <Login /> */}
       </div>
     </div>
   );

@@ -5,9 +5,8 @@ import "../grid.css";
 export default class Login extends Component {
   render() {
     return (
-      <div className="modal">
-        <div id="overlay" className="modal__overlay"></div>
-        <div className="modal__body">
+      <div className="modal__body">
+        <div>
           <form className="auth-form">
             <div className="auth-form__container">
               <div className="auth-form__header">
