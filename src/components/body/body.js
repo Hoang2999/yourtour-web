@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./body.css";
-import "../grid.css";
+import React, { Component } from 'react';
+import './body.css';
+import '../grid.css';
 
 export default class Body extends Component {
   render() {
@@ -18,7 +18,7 @@ export default class Body extends Component {
             <div className="row sm-gutter app__content">
               <div class="col l-4 m-4 c-6">
                 <div className="app__content-product">
-                  <img src={"img/img4.jpg"} style={{ width: "150px" }}></img>
+                  <img src={'img/img4.jpg'} style={{ width: '150px' }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
                       1 | Always private & personal
@@ -32,7 +32,7 @@ export default class Body extends Component {
               </div>
               <div class="col l-4 m-4 c-6">
                 <div className="app__content-product">
-                  <img src={"img/img5.jpg"} style={{ width: "150px" }}></img>
+                  <img src={'img/img5.jpg'} style={{ width: '150px' }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
                       2 | Guided by local experts
@@ -46,7 +46,7 @@ export default class Body extends Component {
               </div>
               <div class="col l-4 m-4 c-6">
                 <div className="app__content-product">
-                  <img src={"img/img6.jpg"} style={{ width: "150px" }}></img>
+                  <img src={'img/img6.jpg'} style={{ width: '150px' }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
                       3 | Without crowds
@@ -66,20 +66,20 @@ export default class Body extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-product-content">
                     <div className="home-product-title">the Netherlands</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
-                    </span>{" "}
+                      COVID 19 STATUS :{' '}
+                    </span>{' '}
                     Open for travelers from EU and Schengen countries.
                     <p className="home-product-desc">
                       Welcoming you with a friendly smile and good spirit! The
@@ -95,20 +95,20 @@ export default class Body extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-product-content">
                     <div className="home-product-title">the Netherlands</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
-                    </span>{" "}
+                      COVID 19 STATUS :{' '}
+                    </span>{' '}
                     Open for travelers from EU and Schengen countries.
                     <p className="home-product-desc">
                       Welcoming you with a friendly smile and good spirit! The
@@ -124,20 +124,20 @@ export default class Body extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-product-content">
                     <div className="home-product-title">the Netherlands</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
-                    </span>{" "}
+                      COVID 19 STATUS :{' '}
+                    </span>{' '}
                     Open for travelers from EU and Schengen countries.
                     <p className="home-product-desc">
                       Welcoming you with a friendly smile and good spirit! The
@@ -162,13 +162,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -179,13 +179,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -196,13 +196,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -213,13 +213,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -230,13 +230,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -247,13 +247,13 @@ export default class Body extends Component {
               <a href="#" className="col l-2 m-4 c-6">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={'img/img7.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-formality-content">
@@ -268,8 +268,8 @@ export default class Body extends Component {
           <div className="home-introduce-cover">
             <img
               className="home-introduce__img"
-              src={"img/img9.jpg"}
-              style={{ width: "162px", height: "112px" }}
+              src={'img/img9.jpg'}
+              style={{ width: '162px', height: '112px' }}
             ></img>
             <div className="grid wide home-introduce-body">
               <div className="home-introduce-content">
@@ -304,8 +304,8 @@ export default class Body extends Component {
               </div>
               <div className="home-introduce-image">
                 <img
-                  src={"img/img10.jpg"}
-                  style={{ width: "462px", height: "272px" }}
+                  src={'img/img10.jpg'}
+                  style={{ width: '462px', height: '272px' }}
                 ></img>
               </div>
             </div>
@@ -319,13 +319,13 @@ export default class Body extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product2-body">
                   <img
-                    src={"img/img11.jpg"}
+                    src={'img/img11.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-product2-content">
@@ -346,13 +346,13 @@ export default class Body extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product2-body">
                   <img
-                    src={"img/img12.jpg"}
+                    src={'img/img12.jpg'}
                     style={{
-                      width: "100%",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      borderRadius: "5px",
+                      width: '100%',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      borderRadius: '5px',
                     }}
                   ></img>
                   <div className="home-product2-content">
@@ -391,14 +391,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img13.jpg"}
+                      src={'img/img13.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -416,14 +416,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img13.jpg"}
+                      src={'img/img13.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -441,14 +441,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img13.jpg"}
+                      src={'img/img13.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -466,14 +466,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img13.jpg"}
+                      src={'img/img13.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -491,14 +491,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img13.jpg"}
+                      src={'img/img13.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -519,14 +519,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img14.jpg"}
+                      src={'img/img14.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -544,14 +544,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img14.jpg"}
+                      src={'img/img14.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -569,14 +569,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img14.jpg"}
+                      src={'img/img14.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -594,14 +594,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img14.jpg"}
+                      src={'img/img14.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
@@ -619,14 +619,14 @@ export default class Body extends Component {
                       </a>
                     </div>
                     <img
-                      src={"img/img14.jpg"}
+                      src={'img/img14.jpg'}
                       style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
+                        width: '290px',
+                        height: '244px',
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5px',
                       }}
                     ></img>
                   </div>
