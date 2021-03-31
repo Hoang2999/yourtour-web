@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./header.css";
 import "../grid.css";
-
+import {
+  Link
+ } from 'react-router-dom'
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -73,11 +75,11 @@ export default class Header extends Component {
                     Become a host
                   </a>
                 </li>
-                <li className="header__navbar-item">
+                <Link to="/login" className="header__navbar-item">
                   <a href="" className="header__navbar-link">
                     Log in
                   </a>
-                </li>
+                </Link>
                 <li className="header__navbar-item">
                   <a href="" className="header__navbar-link">
                     Sign up
@@ -205,7 +207,9 @@ export default class Header extends Component {
                   </div>
                   <div class="header__navbar-user-menu">
                     <div class="header__navbar-user-item">
-                      <div className="header__navbar-user-menu-people">Adults</div>
+                      <div className="header__navbar-user-menu-people">
+                        Adults
+                      </div>
                       <div className="header__navbar-user-menu-count">
                         <i className="header__navbar-user-icon fas fa-minus"></i>
                         <span> 4 </span>
@@ -213,7 +217,9 @@ export default class Header extends Component {
                       </div>
                     </div>
                     <div class="header__navbar-user-item">
-                      <div className="header__navbar-user-menu-people">Children</div>
+                      <div className="header__navbar-user-menu-people">
+                        Children
+                      </div>
                       <div className="header__navbar-user-menu-count">
                         <i className="header__navbar-user-icon fas fa-minus"></i>
                         <span> 0 </span>

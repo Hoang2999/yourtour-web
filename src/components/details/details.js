@@ -1,6 +1,9 @@
 import React, { Component} from 'react';
 import "./details.css";
 import "../grid.css";
+import {
+  Link
+ } from 'react-router-dom'
 
 export default class Details extends Component {
     render() {
@@ -8,7 +11,7 @@ export default class Details extends Component {
           <div className="grid wide">
             <div className="row sm-gutter details__container">
               <div className="col l-4 details__container-list">
-                <div className="details__container-item">
+                <Link to="/moredetail" className="details__container-item">
                   <img src={"img/img4.jpg"} style={{ width: "100%" }}></img>
                   <div className="details__container-title">
                     <div className="details__container-desc">
@@ -30,7 +33,7 @@ export default class Details extends Component {
                     <i className="fas fa-star"></i>
                     <span className="home-product-item__match">4 / 5</span>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className="col l-4 details__container-list">
                 <div className="details__container-item">
