@@ -14,7 +14,6 @@ function App() {
         <Body />
         <Footer />
       </div>
-
     </Router>
   );
 }
