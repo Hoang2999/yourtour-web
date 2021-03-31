@@ -1,0 +1,137 @@
+.moredetail__container {
+    margin-top: 20px;
+}
+
+.moredetail__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4a4a4a;
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+
+.moredetail__decs {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 1.6rem;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.moredetail__body {
+    margin-top: 10px;
+}
+
+.moredetail__location {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.moredetail__reasons {
+    margin-top: 30px;
+}
+
+.moredetail__heading {
+    font-size: 2rem;
+    color: #4a4a4a;
+    font-weight: 800;
+}
+
+.moredetail__resons {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: block;
+}
+
+.moredetail__reasons-body {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-left: 6px;
+}
+
+.moredetail__expect-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4a4a4a;
+    line-height: 2rem;
+    margin-bottom: 12px;
+}
+
+.moredetail__expect-decs {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.moredetail__container-pick {
+    font-size: 2rem;
+    color: #4a4a4a;
+}
+
+.moredetail__pick-title {
+    font-size: 2rem;
+    color: #4a4a4a;
+    font-weight: 800;
+}
+
+.moredetail__pick-desc {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.moredetails__container-title {
+    padding: 15px;
+}
+
+.moredetails__container-desc {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.moredetails__container-link {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.moredetails__container-speak {
+    padding: 15px 0 0 15px;
+}
+
+.moredetails__container-speaker {
+    font-weight: 500;
+}
+
+.moredetails__container-star {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.moredetails__home-product-item__rating {
+    font-size: 1rem;
+    transform-origin: right;
+    color: #d5d5d5;
+}
+
+.moredetails__home-product-item__star-gold {
+    color: var(--primary-color);
+}
+
+.moredetails__home-product-item__match {
+    color: var(--text-color);
+    margin-left: 4px;
+}
+
+.moredetails__home-product-pick-me {
+    border: 1px solid var(--primary-color);
+    border-radius: 1.8rem;
+    padding: 0 12px;
+    background-color: var(--white-color);
+}

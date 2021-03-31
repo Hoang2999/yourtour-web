@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/header/header';
-import Body from './components/body/body';
-import Footer from './components/footer/footer';
-import Register from './components/register/register';
-import Login from './components/login/login';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/header/header";
+import Body from "./components/body/body";
+import Footer from "./components/footer/footer";
+import {
+  BrowserRouter as Router
+} from 'react-router-dom'
 function App() {
   return (
-    <div>
+    <Router>
       <div className="App">
         <Header />
         <Body />
         <Footer />
       </div>
-      {/* <div className="modal">
-        <div className="modal__overlay"></div>
-        <Register />
-        <Login />
-      </div> */}
-    </div>
+    </Router>
   );
 }
 
