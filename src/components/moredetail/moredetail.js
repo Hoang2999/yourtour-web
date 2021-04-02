@@ -143,7 +143,10 @@ export default class Details extends Component {
             </p>
             <div className="details__container-list">
               <div className="details__container-item">
-                <img src={"img/img4.jpg"} style={{ width: "100%", backgroundPosition: "center"}}></img>
+                <img
+                  src={"img/img4.jpg"}
+                  style={{ width: "100%", backgroundPosition: "center" }}
+                ></img>
                 <div className="moredetails__container-title">
                   <div className="moredetails__container-desc">
                     Xin chào I am
@@ -172,11 +175,33 @@ export default class Details extends Component {
                       70 reviews
                     </span>
                   </div>
-                  <button className="moredetails__home-product-pick-me" style={{backgroundColor: "var(--white-color)", color: "var(--primary-color)"}}>
+                  <button
+                    className="moredetails__home-product-pick-me"
+                    style={{
+                      backgroundColor: "var(--white-color)",
+                      color: "var(--primary-color)",
+                    }}
+                  >
                     Pick me
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="row sm-gutter moredetail__plan">
+          <h1 className="moredetail__title">This is the plan</h1>
+          <p className="moredetail__desc">
+            Check out the plan below to see what you'll get up to with your
+            local host. Feel free to personalize this offer.
+          </p>
+          <div className="col l-8">
+            <div className="moredetail__plan-meeting">
+              <h3 className="moredetail__meeting">Meeting point</h3>
+              <p className="moredetail__desc">
+                Lotus Water Puppet Theater - Hanoi
+              </p>
+
             </div>
           </div>
         </div>
