@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./home.css";
 import "../grid.css";
-import {
-   Link
-  } from 'react-router-dom'
+import { Link } from "react-router-dom";
 export default class Home extends Component {
   render() {
     return (
@@ -161,7 +159,7 @@ export default class Home extends Component {
               With the local of your choice
             </p>
             <div className="row sm-gutter home-formality-cover">
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -178,7 +176,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </a>
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -195,7 +193,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </a>
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -212,7 +210,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </a>
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -229,7 +227,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </a>
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -246,7 +244,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </a>
-              <a href="#" className="col l-2 m-4 c-6">
+              <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
                     src={"img/img7.jpg"}
@@ -380,7 +378,10 @@ export default class Home extends Component {
             <div className="container-product3">
               <div className="home-product3">
                 <h2>Top 5 cities to go with kids</h2>
-                <Link to="/details" className="row sm-gutter home-product3-cover">
+                <Link
+                  to="/details"
+                  className="row sm-gutter home-product3-cover"
+                >
                   <div className="home-product3-body">
                     <div className="home-product3-content">
                       <div className="home-product3-title">1 | Paris</div>

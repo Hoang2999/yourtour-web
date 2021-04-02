@@ -150,7 +150,7 @@
     width: 459px;
 }
 
-.header__search-input-wrap1 {
+.calendar__container {
     position: relative;
     cursor: pointer;
     background-color: var(--white-color);
@@ -158,11 +158,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 200px;
+    width: 172px;
     margin-right: 8px;
     cursor: pointer;
     outline: none;
     border: 1px solid #333;
+}
+
+.header__search-input-wrap1 {
+    display: block;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
 }
 
 .header__search-input-text {
@@ -171,7 +179,16 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    margin: 0 6px;
+    padding: 0 6px;
+}
+
+.header__search-input-text1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /* margin: 0 6px; */
 }
 
 .header__search-icon {
@@ -182,6 +199,21 @@
 .header__search-icon-text {
     display: flex;
     align-items: center;
+}
+
+.header__search-input-people {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--white-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 173px;
+    margin-right: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
 }
 
 
@@ -198,13 +230,13 @@
     position: absolute;
     top: calc(100% + 2px);
     left: 0;
-    width: 560px;
+    max-width: 600px !important;
     background-color: var(--white-color);
     border-radius: 4px;
     box-shadow: 0 1px 5px rgb(189, 189, 189);
     overflow: hidden;
     text-align: left;
-    display: none;
+    /* display: none; */
     z-index: 1;
 }
 
@@ -253,7 +285,8 @@
 
 /* Calendar */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
  :root {
     --primary: #08aeea;
     --secondary: #13D2B8;
@@ -386,9 +419,9 @@ button {
         width: auto;
         height: auto;
     }
-}
+} */
 
-.header__search-input-wrap1:hover .header__navbar-user-menu {
+.header__search-input-people:focus .header__navbar-user-menu {
     display: block;
 }
 
@@ -427,4 +460,17 @@ button {
     border: 1px solid #333;
     border-radius: 50%;
     padding: 4px;
+}
+
+.home-product3-cover {
+    text-decoration: none;
+    display: block
+}
+
+.header__search-input-wrap:focus-visible {
+    border-color: var(--primary-color);
+}
+
+.calendar__container:focus {
+    border-color: var(--primary-color);
 }

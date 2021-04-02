@@ -1,44 +1,49 @@
-import React, { Component } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./header.css";
 import "../grid.css";
 import {
   Link
  } from 'react-router-dom'
 import Calendar from 'react-calendar'
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      number: 1,
-      toggleCalendar: false,
-      value: new Date()
-    };
-  }
 
-  componentDidMount() {
+
+export default function Header() {
+  const wrapperRef = useRef(null);
+  const [number,setNumber] = useState(1)
+  const [toggleCalendar, setToggleCalendar] = useState(false)
+  const [value, onChange] = useState(new Date())
+  
+  console.log(value)
+
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          setToggleCalendar(false);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [wrapperRef]);
+
+  useEffect(() => {
     setInterval(() => {
-      if (this.state.number < 3) {
-        this.setState({
-          number: this.state.number + 1,
-        });
+      if (number < 3) {
+        setNumber(number +1)
       } else {
-        this.setState({
-          number: 1,
-        });
+        setNumber(1)
       }
     }, 3000);
-  }
+  }, [])
 
-  onChange = () => {
-    return;
-  }
-
-  render() {
     return (
       <div className="app">
         <div className="main">
           <img
-            src={"img/img" + this.state.number + ".jpg"}
+            src={"img/img" + number + ".jpg"}
             style={{ width: "100%" }}
             alt=""
           />
@@ -110,37 +115,45 @@ export default class Header extends Component {
                     placeholder="Where are you going?"
                   />
                 </div>
-                <button className="header__search-input-wrap1" onClick={() => this.setState({
-                  toggleCalendar : !this.state.toggleCalendar
-                })}>
-                  <div className="header__search-input-text">
-                    <div className="header__search-icon-text">
-                      <i className="header__search-icon fas fa-table"></i>
-                      <span
-                        className="header__search-input"
-                        style={{ color: "grey" }}
-                      >
-                        Enter date
-                      </span>
+                <div className="calendar__container">
+                  <a className="header__search-input-wrap1" onClick={() => setToggleCalendar(!toggleCalendar)}>
+                    <div className="header__search-input-text">
+                      <div className="header__search-icon-text">
+                        <i className="header__search-icon fas fa-table"></i>
+                        <span
+                          className="header__search-input"
+                          style={{ color: "grey" }}
+                        >
+                          Enter date
+                        </span>
+                      </div>
+                      <i className="header__search-icon fas fa-chevron-down"></i>
                     </div>
-                    <i className="header__search-icon fas fa-chevron-down"></i>
+                  </a>
+                  <div 
+                      ref={wrapperRef}>
+                      {toggleCalendar ? (
+                    <Calendar
+                      className="header__search-history"
+                      onChange={onChange}
+                      value={value}
+                    />
+                  ) : null}
                   </div>
-                {toggleCalenda ? <Calendar 
-                 onChange={onChange}
-                 value={value} /> : null}
-                </button>
-                <button className="header__search-input-wrap1">
-                  <div className="header__search-input-text">
+                 
+                </div>
+                <button className="header__search-input-people">
+                  <div className="header__search-input-text1">
                     <span
-                      className="header__search-input"
+                      className="header__search-input1"
                       style={{ color: "grey" }}
                     >
                       4 People
                     </span>
                     <i className="header__search-icon fas fa-chevron-down"></i>
                   </div>
-                  <div class="header__navbar-user-menu">
-                    <div class="header__navbar-user-item">
+                  <div className="header__navbar-user-menu">
+                    <div className="header__navbar-user-item">
                       <div className="header__navbar-user-menu-people">
                         Adults
                       </div>
@@ -171,5 +184,4 @@ export default class Header extends Component {
         </div>
       </div>
     );
-  }
 }

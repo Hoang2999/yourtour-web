@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/header/header";
 import Body from "./components/body/body";
 import Footer from "./components/footer/footer";
-import {
-  BrowserRouter as Router
-} from 'react-router-dom'
+import "react-calendar/dist/Calendar.css";
+import { BrowserRouter as Router } from "react-router-dom";
+
 function App() {
   return (
     <Router>
@@ -14,7 +13,6 @@ function App() {
         <Body />
         <Footer />
       </div>
-
     </Router>
   );
 }

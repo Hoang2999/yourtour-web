@@ -150,6 +150,7 @@
     display: block;
     transition: box-shadow .13s ease-in;
     margin: 2rem 1.5rem 2rem 0;
+    width: 100%;
 }
 
 .home-formality-body:hover {
@@ -158,6 +159,7 @@
 
 .home-formality-body:hover .home-formality-title {
     color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .home-formality-content {
@@ -383,4 +385,8 @@
     margin-top: 20px;
     display: inline-block;
     margin-top: 112px;
+}
+
+.home-formality-container {
+    text-decoration: none;
 }
