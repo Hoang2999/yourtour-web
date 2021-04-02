@@ -1,5 +1,6 @@
 .moredetail__container {
-    margin-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #dbdbdb;
 }
 
 .moredetail__title {
@@ -24,7 +25,7 @@
 
 .moredetail__location {
     margin-left: 8px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .moredetail__reasons {
@@ -58,8 +59,9 @@
 }
 
 .moredetail__expect-decs {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-color);
+    line-height: 2rem;
 }
 
 .moredetail__container-pick {
@@ -74,8 +76,10 @@
 }
 
 .moredetail__pick-desc {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-color);
+    font-weight: 450;
+    margin-bottom: 0;
 }
 
 .moredetails__container-title {
@@ -134,4 +138,119 @@
     border-radius: 1.8rem;
     padding: 0 12px;
     background-color: var(--white-color);
+}
+
+.moredetail__plan {
+    border-top: 1px solid #dbdbdb;
+    margin-top: 20px;
+}
+
+.moredetail__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4a4a4a;
+    line-height: 2rem;
+    margin-bottom: 12px;
+}
+
+.moredetail__desc {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 450;
+}
+
+.moredetail__plan-meeting {
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--primary-color);
+    position: relative;
+    height: 100%;
+}
+
+.moredetail__plan-meeting::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: var(--primary-color);
+    left: -9px;
+    top: 0;
+    border-radius: 100%;
+    border: 3px solid #fff;
+}
+
+.moredetail__meeting {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.moredetail__plan-meeting:nth-child(2) {
+    border-left-color: transparent;
+}
+
+.moredetail__desc {
+    margin-top: 0;
+}
+
+.moredetail__comments {
+    border-top: 1px solid #dbdbdb;
+    margin-top: 50px;
+}
+
+.moredetails__avatar {
+    display: flex;
+    align-items: center;
+}
+
+.moredetail__review {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4a4a4a;
+    line-height: 2rem;
+    margin-bottom: 30px;
+}
+
+.moredetails__infor {
+    margin: 4px 0 0 12px;
+}
+
+.moredetails__name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #696161;
+    margin-bottom: 3px;
+}
+
+.moredetails__about {
+    color: #825a56;
+    font-weight: 600;
+    margin-left: 4px;
+    margin-bottom: 3px;
+}
+
+.moredetails__about a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.moredetails__date {
+    color: #825a56;
+    font-weight: 600;
+}
+
+.moredetail__feedback {
+    color: #4a4a4a;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.moredetail__contribute {
+    margin-bottom: 8px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.moredetail__contribute:first-child {
+    border-top: transparent;
 }
