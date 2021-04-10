@@ -1,19 +1,23 @@
+import Layout from "./layout";
+import ProfileUser from "./layout/profile-user/profileUser";
 import "./App.css";
-import Header from "./components/header/header";
-import Body from "./components/body/body";
-import Footer from "./components/footer/footer";
-import "react-calendar/dist/Calendar.css";
-import { BrowserRouter as Router } from "react-router-dom";
-
+import { BrowserRouter as Router,Route,Switch,Redirect } from "react-router-dom";
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Body />
-        <Footer />
-      </div>
-    </Router>
+
+  <Router>
+    <div>
+      <Switch>
+        <Redirect exact from="/" to="/home" />
+        <Route path="/">
+          <Layout />
+        </Route>
+        <Route path="/profile">
+            <ProfileUser />
+          </Route>
+      </Switch>
+    </div>
+  </Router>
   );
 }
 

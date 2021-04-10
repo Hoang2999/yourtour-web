@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import "./moredetail.css";
 import "../grid.css";
+import {
+  Link
+ } from 'react-router-dom'
 
-export default class Details extends Component {
+export default class moreDetail extends Component {
   render() {
     return (
       <div className="grid wide">
@@ -147,7 +150,7 @@ export default class Details extends Component {
           </p>
           <div className="row sm-gutter">
             <div className="col l-4">
-              <div className="details__container-list">
+              <Link to="/tourguide" className="details__container-list">
                 <div className="details__container-item">
                   <img
                     src={"img/img4.jpg"}
@@ -192,7 +195,7 @@ export default class Details extends Component {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

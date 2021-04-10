@@ -3,6 +3,10 @@
     border-top: 1px solid #dbdbdb;
 }
 
+.details__container-list {
+    text-decoration: none;
+}
+
 .moredetail__title {
     font-size: 2.2rem;
     font-weight: 800;
@@ -67,6 +71,10 @@
 .moredetail__container-pick {
     font-size: 2rem;
     color: #4a4a4a;
+}
+
+.moredetail__pick {
+    text-decoration: none;
 }
 
 .moredetail__pick-title {
