@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import "./header.css";
-import "../grid.css";
-import {
-  Link
- } from 'react-router-dom'
+import React, { Component } from 'react';
+import './header.css';
+import '../grid.css';
+import ProfilePage from '../profile/ProfilePage';
+import { Link } from 'react-router-dom';
+import { auth } from '../../firebase';
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       number: 1,
+      profile: null,
     };
   }
 
@@ -24,15 +25,21 @@ export default class Header extends Component {
         });
       }
     }, 3000);
+    auth.onAuthStateChanged((user) => {
+      this.setState({
+        profile: user,
+      });
+    });
   }
 
   render() {
+    const { profile } = this.state;
     return (
       <div className="app">
         <div className="main">
           <img
-            src={"img/img" + this.state.number + ".jpg"}
-            style={{ width: "100%" }}
+            src={'img/img' + this.state.number + '.jpg'}
+            style={{ width: '100%' }}
             alt=""
           />
           <header className="header">
@@ -69,23 +76,26 @@ export default class Header extends Component {
                   </svg>
                 </a>
               </div>
-              <ul className="header__navbar-list">
-                <li className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
-                    Become a host
-                  </a>
-                </li>
-                <Link to="/login" className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
-                    Log in
-                  </a>
-                </Link>
-                <li className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
-                    Sign up
-                  </a>
-                </li>
-              </ul>
+              {profile ? (
+                <ProfilePage />
+              ) : (
+                <>
+                  <ul className="header__navbar-list">
+                    <li className="header__navbar-item">
+                      <a href="" className="header__navbar-link">
+                        Become a host
+                      </a>
+                    </li>
+                    <Link to="/login" className="header__navbar-item">
+                      Log in
+                    </Link>
+
+                    <Link to="/register" className="header__navbar-item">
+                      Sign up
+                    </Link>
+                  </ul>
+                </>
+              )}
             </nav>
             <div className="header__container">
               <div className="header__text">
@@ -109,7 +119,7 @@ export default class Header extends Component {
                       <i className="header__search-icon fas fa-table"></i>
                       <span
                         className="header__search-input"
-                        style={{ color: "grey" }}
+                        style={{ color: 'grey' }}
                       >
                         Enter date
                       </span>
@@ -199,7 +209,7 @@ export default class Header extends Component {
                   <div className="header__search-input-text">
                     <span
                       className="header__search-input"
-                      style={{ color: "grey" }}
+                      style={{ color: 'grey' }}
                     >
                       4 People
                     </span>
