@@ -1,20 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/header/header";
-import Body from "./components/body/body";
-import Footer from "./components/footer/footer";
-import {
-  BrowserRouter as Router
-} from 'react-router-dom'
+import Layout from "./layout";
+import { BrowserRouter as Router,Route,Switch,Redirect } from "react-router-dom";
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Body />
-        <Footer />
-      </div>
-    </Router>
+
+  <Router>
+    <div>
+      <Switch>
+        <Redirect exact from="/" to="/home" />
+        <Route path="/">
+          <Layout />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
   );
 }
 

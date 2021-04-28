@@ -1,21 +1,21 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBSdrT-Y3xE7YvJJYq1edWrCqif-NAqhMc',
-  authDomain: 'yourtour-c4d0f.firebaseapp.com',
-  databaseURL: 'https://yourtour-c4d0f.firebaseio.com',
-  projectId: 'yourtour-c4d0f',
-  storageBucket: 'yourtour-c4d0f.appspot.com',
-  messagingSenderId: '855060710487',
-  appId: '1:855060710487:web:7f907ef264c514d6298f12',
-  measurementId: 'G-QMSPR75J9F',
+  apiKey: "AIzaSyBSdrT-Y3xE7YvJJYq1edWrCqif-NAqhMc",
+  authDomain: "yourtour-c4d0f.firebaseapp.com",
+  databaseURL: "https://yourtour-c4d0f.firebaseio.com",
+  projectId: "yourtour-c4d0f",
+  storageBucket: "yourtour-c4d0f.appspot.com",
+  messagingSenderId: "855060710487",
+  appId: "1:855060710487:web:7f907ef264c514d6298f12",
+  measurementId: "G-QMSPR75J9F",
 };
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
-const firestore = firebase.firestore();
+export const firestore = firebase.firestore();
 export const generateUserDocument = async (newUser, additionalData) => {
   if (!newUser) return;
 
@@ -25,25 +25,25 @@ export const generateUserDocument = async (newUser, additionalData) => {
       const userFirestore = {
         uID: user.user.uid,
         name: newUser.fullName,
-        phone: '',
+        phone: "",
         email: newUser.email,
         gender: true,
-        picture: 'https://profiles.utdallas.edu/img/default.png',
+        picture: "https://profiles.utdallas.edu/img/default.png",
         birthday: new Date().toISOString().slice(0, 10),
-        description: '',
-        providerId: 'firebase.com',
-        idCity: '',
-        languages: '',
+        description: "",
+        providerId: "firebase.com",
+        idCity: "",
+        languages: "",
         isActive: false,
-        passions: '',
-        title: '',
-        imageProfile: '',
+        passions: "",
+        title: "",
+        imageProfile: "",
         dateCreated: new Date().getTime(),
       };
 
-      addFirestore('travelers', userFirestore)
+      addFirestore("travelers", userFirestore)
         .then(() => {
-          console.log('Register success !');
+          console.log("Register success !");
         })
         .catch((error) => {
           console.log(error);
@@ -120,26 +120,32 @@ export const signInWithGoogle = async () => {
   //       });
   //   });
 };
-// export const getCitiesInCountry = async (path) => {
-//   const datas = [];
-//   await firestore()
-//     .collection(path)
-//     .get()
-//     .then((cities) => {
-//       cities.forEach((city) => {
-//         const item = {
-//           id: city.id,
-//           name: city.data().name,
-//           image: city.data().image,
-//           description: city.data().description,
-//           visitors: city.data().visitors,
-//           id_tourguides: city.data().id_tourguides,
-//         };
-//         datas.push(item);
-//       });
-//     });
-//   return datas;
-// };
+
+
+  // //logout auth
+  export const logOut = () => {
+    return auth.signOut();
+  };
+export const getCitiesInCountry = async (path) => {
+  const datas = [];
+  await firestore
+    .collection(path)
+    .get()
+    .then((cities) => {
+      cities.forEach((city) => {
+        const item = {
+          id: city.id,
+          name: city.data().name,
+          image: city.data().image,
+          description: city.data().description,
+          visitors: city.data().visitors,
+          id_tourguides: city.data().id_tourguides,
+        };
+        datas.push(item);
+      });
+    });
+  return datas;
+};
 
 // // get ratings
 // export const getRatings = async (idTour) => {
@@ -347,11 +353,6 @@ export const signInWithGoogle = async () => {
 //       // tour.collection('ratings').add({});
 //       console.log('created tour !');
 //     });
-// };
-
-// //logout auth
-// export const logOut = () => {
-//   return auth().signOut();
 // };
 
 // // login facebook
