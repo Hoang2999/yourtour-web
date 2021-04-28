@@ -1,16 +1,16 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSdrT-Y3xE7YvJJYq1edWrCqif-NAqhMc",
-  authDomain: "yourtour-c4d0f.firebaseapp.com",
-  databaseURL: "https://yourtour-c4d0f.firebaseio.com",
-  projectId: "yourtour-c4d0f",
-  storageBucket: "yourtour-c4d0f.appspot.com",
-  messagingSenderId: "855060710487",
-  appId: "1:855060710487:web:7f907ef264c514d6298f12",
-  measurementId: "G-QMSPR75J9F",
+  apiKey: 'AIzaSyBSdrT-Y3xE7YvJJYq1edWrCqif-NAqhMc',
+  authDomain: 'yourtour-c4d0f.firebaseapp.com',
+  databaseURL: 'https://yourtour-c4d0f.firebaseio.com',
+  projectId: 'yourtour-c4d0f',
+  storageBucket: 'yourtour-c4d0f.appspot.com',
+  messagingSenderId: '855060710487',
+  appId: '1:855060710487:web:7f907ef264c514d6298f12',
+  measurementId: 'G-QMSPR75J9F',
 };
 firebase.initializeApp(firebaseConfig);
 
@@ -19,31 +19,31 @@ export const firestore = firebase.firestore();
 export const generateUserDocument = async (newUser, additionalData) => {
   if (!newUser) return;
 
-  auth
+  await auth
     .createUserWithEmailAndPassword(newUser.email, newUser.password)
     .then((user) => {
       const userFirestore = {
         uID: user.user.uid,
         name: newUser.fullName,
-        phone: "",
+        phone: '',
         email: newUser.email,
         gender: true,
-        picture: "https://profiles.utdallas.edu/img/default.png",
+        picture: 'https://profiles.utdallas.edu/img/default.png',
         birthday: new Date().toISOString().slice(0, 10),
-        description: "",
-        providerId: "firebase.com",
-        idCity: "",
-        languages: "",
+        description: '',
+        providerId: 'firebase.com',
+        idCity: '',
+        languages: '',
         isActive: false,
-        passions: "",
-        title: "",
-        imageProfile: "",
+        passions: '',
+        title: '',
+        imageProfile: '',
         dateCreated: new Date().getTime(),
       };
 
-      addFirestore("travelers", userFirestore)
+      addFirestore('travelers', userFirestore)
         .then(() => {
-          console.log("Register success !");
+          console.log('Register success !');
         })
         .catch((error) => {
           console.log(error);
@@ -121,11 +121,10 @@ export const signInWithGoogle = async () => {
   //   });
 };
 
-
-  // //logout auth
-  export const logOut = () => {
-    return auth.signOut();
-  };
+// //logout auth
+export const logOut = () => {
+  return auth.signOut();
+};
 export const getCitiesInCountry = async (path) => {
   const datas = [];
   await firestore

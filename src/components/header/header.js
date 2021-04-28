@@ -1,14 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./header.css";
-import "../grid.css";
-import { Link } from "react-router-dom";
-import Calendar from "react-calendar";
+import React, { useState, useEffect, useRef } from 'react';
+import './header.css';
+import '../grid.css';
+import { Link } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import { auth } from '../../firebase';
+import ProfilePage from '../profile/ProfilePage';
 
 export default function Header() {
   const wrapperRef = useRef(null);
   const [number, setNumber] = useState(1);
   const [toggleCalendar, setToggleCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
+  const [profile, setProfile] = useState(null);
 
   console.log(value);
 
@@ -19,10 +22,10 @@ export default function Header() {
       }
     }
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [wrapperRef]);
 
@@ -35,19 +38,22 @@ export default function Header() {
       }
     }, 3000);
   }, []);
+  auth.onAuthStateChanged((user) => {
+    setProfile(user);
+  });
 
   return (
     <div className="app">
       <div className="main">
         <img
-          src={"img/img" + number + ".jpg"}
-          style={{ width: "100%" }}
+          src={'img/img' + number + '.jpg'}
+          style={{ width: '100%' }}
           alt=""
         />
         <header className="header">
           <nav className="header__navbar">
             <div className="header__logo hide-on-tablet">
-              <a href="#" className="header__logo-link">
+              <a href="/home" className="header__logo-link">
                 <svg
                   className="header__logo-img"
                   path
@@ -78,23 +84,26 @@ export default function Header() {
                 </svg>
               </a>
             </div>
-            <ul className="header__navbar-list">
-                <li className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
-                    Become a host
-                  </a>
-                </li>
-                <Link to="/login" className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
+            {profile ? (
+              <ProfilePage />
+            ) : (
+              <>
+                <ul className="header__navbar-list">
+                  <li className="header__navbar-item">
+                    <a href="" className="header__navbar-link">
+                      Become a host
+                    </a>
+                  </li>
+                  <Link to="/login" className="header__navbar-item">
                     Log in
-                  </a>
-                </Link>
-                <li className="header__navbar-item">
-                  <a href="" className="header__navbar-link">
+                  </Link>
+
+                  <Link to="/register" className="header__navbar-item">
                     Sign up
-                  </a>
-                </li>
-              </ul>
+                  </Link>
+                </ul>
+              </>
+            )}
           </nav>
           <div className="header__container">
             <div className="header__text">
@@ -144,7 +153,7 @@ export default function Header() {
                 <div className="header__search-input-text1">
                   <span
                     className="header__search-input1"
-                    style={{ color: "grey" }}
+                    style={{ color: 'grey' }}
                   >
                     4 People
                   </span>

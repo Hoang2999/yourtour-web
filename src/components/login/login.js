@@ -60,7 +60,7 @@ const Login = () => {
                 <input
                   id="password"
                   name="password"
-                  type="text"
+                  type="password"
                   className="auth-form__input"
                   placeholder="Password"
                   value={password}
