@@ -122,7 +122,7 @@ export default function Header() {
                       <i className="header__search-icon fas fa-table"></i>
                       <span
                         className="header__search-input"
-                        style={{ color: "grey" }}
+                        style={{ color: 'grey' }}
                       >
                         Enter date
                       </span>

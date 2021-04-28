@@ -1,42 +1,42 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./register.css";
-import "../grid.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './register.css';
+import '../grid.css';
 
-import { auth, signInWithGoogle, generateUserDocument } from "../../firebase";
+import { auth, signInWithGoogle, generateUserDocument } from '../../firebase';
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
   const [error, setError] = useState(null);
 
   const createUserWithEmailAndPasswordHandler = async (
     event,
     email,
-    password
+    password,
   ) => {
     event.preventDefault();
     try {
       const user = { email, password, fullName };
       generateUserDocument(user);
     } catch (error) {
-      setError("Error Signing up with email and password");
+      setError('Error Signing up with email and password');
     }
 
-    setEmail("");
-    setPassword("");
-    setFullName("");
+    setEmail('');
+    setPassword('');
+    setFullName('');
   };
 
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
 
-    if (name === "email") {
+    if (name === 'email') {
       setEmail(value);
-    } else if (name === "password") {
+    } else if (name === 'password') {
       setPassword(value);
-    } else if (name === "fullName") {
+    } else if (name === 'fullName') {
       setFullName(value);
     }
   };
@@ -109,7 +109,7 @@ const Register = () => {
                     createUserWithEmailAndPasswordHandler(
                       event,
                       email,
-                      password
+                      password,
                     );
                   }}
                 >
@@ -125,7 +125,7 @@ const Register = () => {
                     try {
                       signInWithGoogle();
                     } catch (error) {
-                      console.error("Error signing in with Google", error);
+                      console.error('Error signing in with Google', error);
                     }
                   }}
                 >
@@ -137,7 +137,7 @@ const Register = () => {
                   Tôi đã có tài khoản
                 </span>
                 <a href="#" className="auth-form_text-login">
-                  {" "}
+                  {' '}
                   <Link to="/login">Đăng nhập</Link>
                 </a>
               </div>
