@@ -1,9 +1,25 @@
 import React, { Component } from "react";
+import { getCitiesInCountry } from "../../firebase";
 import "./home.css";
 import "../grid.css";
 import { Link } from "react-router-dom";
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+  componentDidMount() {
+    getCitiesInCountry("countries/vietnam/cities").then((res) => {
+      this.setState({
+        data: res,
+      });
+    });
+  }
+
   render() {
+    console.log(this.state.data);
     return (
       <div className="app__container">
         <div className="grid wide">
@@ -377,263 +393,41 @@ export default class Home extends Component {
           <div className="grid wide">
             <div className="container-product3">
               <div className="home-product3">
-                <h2>Top 5 cities to go with kids</h2>
-                <Link
-                  to="/details"
-                  className="row sm-gutter home-product3-cover"
-                >
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Paris</div>
-                      <p className="home-product3-desc">
-                        Paris with kids? Oui! Discover cool sights, fun
-                        playgrounds & yummy food.
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img13.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </Link>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Paris</div>
-                      <p className="home-product3-desc">
-                        Paris with kids? Oui! Discover cool sights, fun
-                        playgrounds & yummy food.
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img13.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Paris</div>
-                      <p className="home-product3-desc">
-                        Paris with kids? Oui! Discover cool sights, fun
-                        playgrounds & yummy food.
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img13.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Paris</div>
-                      <p className="home-product3-desc">
-                        Paris with kids? Oui! Discover cool sights, fun
-                        playgrounds & yummy food.
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img13.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Paris</div>
-                      <p className="home-product3-desc">
-                        Paris with kids? Oui! Discover cool sights, fun
-                        playgrounds & yummy food.
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img13.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-              </div>
-              <div className="home-product3">
-                <h2>Top 5 cities for foodies</h2>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Madrid</div>
-                      <p className="home-product3-desc">
-                        Madrid has it all from modern to traditional food. It's
-                        simply 'delicioso'!
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img14.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Madrid</div>
-                      <p className="home-product3-desc">
-                        Madrid has it all from modern to traditional food. It's
-                        simply 'delicioso'!
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img14.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Madrid</div>
-                      <p className="home-product3-desc">
-                        Madrid has it all from modern to traditional food. It's
-                        simply 'delicioso'!
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img14.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Madrid</div>
-                      <p className="home-product3-desc">
-                        Madrid has it all from modern to traditional food. It's
-                        simply 'delicioso'!
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img14.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
-                <div className="row sm-gutter home-product3-cover">
-                  <div className="home-product3-body">
-                    <div className="home-product3-content">
-                      <div className="home-product3-title">1 | Madrid</div>
-                      <p className="home-product3-desc">
-                        Madrid has it all from modern to traditional food. It's
-                        simply 'delicioso'!
-                      </p>
-                      <a href="#" className="home-product3-link">
-                        Explore Paris with kids
-                      </a>
-                    </div>
-                    <img
-                      src={"img/img14.jpg"}
-                      style={{
-                        width: "290px",
-                        height: "244px",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        borderRadius: "5px",
-                      }}
-                    ></img>
-                  </div>
-                </div>
+                <h2>5 thành phố hàng đầu để đi cùng trẻ em</h2>
+                {this.state.data.length > 0 &&
+                  this.state.data.map((item, index) => (
+                    <Link
+                      to="/details"
+                      className="row sm-gutter home-product3-cover"
+                    >
+                      <div className="row sm-gutter home-product3-cover">
+                        <div className="home-product3-body">
+                          <div className="home-product3-content">
+                            <div className="home-product3-title">{`${
+                              index + 1
+                            } | ${item.name}`}</div>
+                            <p className="home-product3-desc">
+                              {item.description}
+                            </p>
+                            <a href="#" className="home-product3-link">
+                              {`Explore ${item.name} with kids`}
+                            </a>
+                          </div>
+                          <img
+                            src={item.image}
+                            style={{
+                              width: "290px",
+                              height: "244px",
+                              backgroundPosition: "center",
+                              backgroundSize: "cover",
+                              backgroundRepeat: "no-repeat",
+                              borderRadius: "5px",
+                            }}
+                          ></img>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
               </div>
             </div>
           </div>

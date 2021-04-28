@@ -84,7 +84,7 @@ export default function Header() {
                     Become a host
                   </a>
                 </li>
-                {/* <Link to="/login" className="header__navbar-item">
+                <Link to="/login" className="header__navbar-item">
                   <a href="" className="header__navbar-link">
                     Log in
                   </a>
@@ -93,19 +93,7 @@ export default function Header() {
                   <a href="" className="header__navbar-link">
                     Sign up
                   </a>
-                </li> */}
-            <div className="header__navbar-item header__navbar-user">
-              <img src="img/img5.jpg" alt="" className="header__navbar-user-img" />
-              <span className="header__navbar-user-name">Phúc huỳnh</span>
-              <Link to="/profile" className="header__navbar-user-menu">
-                <li className="header__navbar-user-item">
-              Edit profile
                 </li>
-                <li className="header__navbar-user-item">
-                  Sign out
-                </li>
-              </Link>
-            </div>
               </ul>
           </nav>
           <div className="header__container">
