@@ -1,27 +1,55 @@
 import React, { Component } from "react";
 import "./moredetail.css";
 import "../grid.css";
-import {
-  Link
- } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { getToursInCity } from "../../firebase";
 
 export default class moreDetail extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      id: this.props.match.params.id
+    };
+  }
+  changeRating(newRating, name) {
+    this.setState({
+      rating: newRating,
+    });
+  }
+  componentDidMount() {
+    getToursInCity("tours", this.state.id).then((res) => {
+      this.setState({
+        data: res,
+      });
+    });
+  }
   render() {
     return (
       <div className="grid wide">
         <div className="row sm-gutter moredetail__container">
           <div className="col l-12">
-            <img src="img/img7.jpg" style={{ width: "100%" }}></img>
-            <h1 className="moredetail__title">
-              Hanoi's Best with Your Family: Highlights & Hidden Gems
-            </h1>
-            <p className="moredetail__decs">
-              Have a blast discovering Hanoi with your family! Join a friendly
-              local and see the best of the city while uncovering family
-              friendly spots everyone will love. From amazing landmarks to
-              unique hidden gems, your new local friend can create a
-              personalized experience perfect for your family!
-            </p>
+            {this.state.data.length > 0 &&
+              this.state.data.map((item, index) => (
+                <div>
+                  {" "}
+                  <img
+                    src={item.tourguideImageCover}
+                    style={{ width: "100%" }}
+                  ></img>
+                  <h1 className="moredetail__title">
+                    Hanoi's Best with Your Family: Highlights & Hidden Gems
+                  </h1>
+                  <p className="moredetail__decs">
+                    Have a blast discovering Hanoi with your family! Join a
+                    friendly local and see the best of the city while uncovering
+                    family friendly spots everyone will love. From amazing
+                    landmarks to unique hidden gems, your new local friend can
+                    create a personalized experience perfect for your family!
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
         <div className="row sm-gutter moredetail__body">

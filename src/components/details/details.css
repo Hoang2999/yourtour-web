@@ -24,7 +24,7 @@
 }
 
 .details__container-food {
-    padding: 0 15px;
+    padding: 0 0 0 4px;
     font-size: 1.2rem;
     font-weight: 700;
     color: #0d1318;
@@ -43,10 +43,11 @@
     color: var(--primary-color);
     text-decoration: underline;
     display: inline-block;
+    padding: 10px 0 0 4px;
 }
 
 .details__container-hour {
-    padding-left: 15px;
+    padding-left: 4px;
     font-size: 1rem;
     color: gray;
 }
@@ -68,7 +69,7 @@
 .home-product-item__rating {
     font-size: 1rem;
     /* transform: scale(0.8); */
-    padding: 4px 15px;
+    padding: 4px;
     transform-origin: right;
     color: #d5d5d5;
     /* margin: -1px 0 0 auto; */
@@ -81,4 +82,25 @@
 
 .home-product-item__match {
     margin-left: 3px;
+}
+
+.home-product-item__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.details__container-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    padding: 4px 0 0 4px;
+}
+
+.rating__name {
+    font-size: 1.3rem;
+    margin-left: 4px;
 }

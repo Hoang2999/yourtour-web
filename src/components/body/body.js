@@ -15,8 +15,8 @@ export default class Body extends Component {
         <Route path="/home" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/details" component={Details} />
-        <Route path="/moredetail" component={moreDetail} />
+        <Route path="/details/:id" component={Details} />
+        <Route path="/moredetail/:id" component={moreDetail} />
         <Route path="/tourguide" component={tourGuide} />
         <Route path="/profile" component={ProfileUser} />
       </div>

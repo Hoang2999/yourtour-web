@@ -392,13 +392,13 @@ export default class Home extends Component {
         <div className="grid wide">
           <div className="grid wide">
             <div className="container-product3">
-              <div className="home-product3">
-                <h2>5 thành phố hàng đầu để đi cùng trẻ em</h2>
+              <h2>6 thành phố hàng đầu</h2>
+              <div className="home-product3" style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between'}}>
                 {this.state.data.length > 0 &&
                   this.state.data.map((item, index) => (
                     <Link
-                      to="/details"
-                      className="row sm-gutter home-product3-cover"
+                      to={`/details/${item.id}`}
+                      className="row sm-gutter home-product3-cover" style={{width:'500px'}}
                     >
                       <div className="row sm-gutter home-product3-cover">
                         <div className="home-product3-body">
@@ -410,14 +410,13 @@ export default class Home extends Component {
                               {item.description}
                             </p>
                             <a href="#" className="home-product3-link">
-                              {`Explore ${item.name} with kids`}
+                              {`Khám phá ${item.name} với bạn bè`}
                             </a>
                           </div>
                           <img
                             src={item.image}
                             style={{
-                              width: "290px",
-                              height: "244px",
+                              width: "190px",
                               backgroundPosition: "center",
                               backgroundSize: "cover",
                               backgroundRepeat: "no-repeat",

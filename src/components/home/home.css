@@ -5,6 +5,10 @@
 
 .container__text {}
 
+.reason-tour {
+    padding-top: 18px;
+}
+
 .container__text h4 {
     font-size: 1.2rem;
     color: #535353;
@@ -323,7 +327,7 @@
 /* home-product3 */
 
 .container-product3 {
-    display: flex;
+    /* display: flex; */
 }
 
 .home-product3 {
@@ -376,6 +380,10 @@
     color: grey;
     font-size: 1.3rem;
     font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .home-product3-link {
