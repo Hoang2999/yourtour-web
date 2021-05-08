@@ -82,7 +82,7 @@ export default class Home extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img1.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -111,7 +111,7 @@ export default class Home extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img1.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -140,7 +140,7 @@ export default class Home extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img1.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -178,7 +178,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -195,7 +195,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -212,7 +212,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -229,7 +229,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -246,7 +246,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -263,7 +263,7 @@ export default class Home extends Component {
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img7.jpg"}
+                    src={"img/img3.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -393,12 +393,20 @@ export default class Home extends Component {
           <div className="grid wide">
             <div className="container-product3">
               <h2>6 thành phố hàng đầu</h2>
-              <div className="home-product3" style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between'}}>
+              <div
+                className="home-product3"
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "space-between",
+                }}
+              >
                 {this.state.data.length > 0 &&
                   this.state.data.map((item, index) => (
                     <Link
                       to={`/details/${item.id}`}
-                      className="row sm-gutter home-product3-cover" style={{width:'500px'}}
+                      className="row sm-gutter home-product3-cover"
+                      style={{ width: "500px" }}
                     >
                       <div className="row sm-gutter home-product3-cover">
                         <div className="home-product3-body">

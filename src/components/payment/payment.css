@@ -1,0 +1,98 @@
+.payment__heading {
+    display: flex;
+}
+
+.payment__tourguide {
+    display: block;
+}
+
+.payment__container {
+    margin-right: 12px;
+}
+
+.payment__container h1 {
+    line-height: 32px;
+}
+
+.payment__time {
+    display: block;
+}
+
+.payment__with {
+    font-size: 1.1rem;
+}
+
+.payment__nametourguide {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+.payment__time {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.payment__free {
+    font-size: 1.1rem;
+}
+
+.payment__cat {
+    text-align: center;
+}
+
+.payment__details {}
+
+.payment__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.payment__item {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.payment__price {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.payment__item1 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.payment__price1 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.payment__now {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    border-top: 1px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment__item2 {
+    margin-top: 22px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.payment__price2 {
+    margin-top: 22px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}

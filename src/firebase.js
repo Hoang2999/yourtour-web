@@ -159,7 +159,7 @@ export const getCitiesInCountry = async (path) => {
 // // get tours in city
 export const getToursInCity = async (path, idCity) => {
   const datas = [];
-  console.log("path",path,idCity);
+  console.log("path", path, idCity);
   await firestore
     .collection(path)
     .where("cityID", "==", idCity)
@@ -189,6 +189,7 @@ export const getToursInCity = async (path, idCity) => {
         datas.push(item);
       });
     });
+  console.log("datas", datas);
   return datas;
 };
 

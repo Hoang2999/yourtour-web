@@ -43,7 +43,12 @@ import {
                 {this.state.data.length > 0 &&
                   this.state.data.map((item, index) => (
                     <Link
-                      to={`/moredetail/${item.id}`}
+                      to={
+                          { 
+                              pathname: `/moredetail/${item.id}`,
+                              myCustomProps: item
+                          } 
+                        }
                       className="details__container-item"
                       style={{ width: "400px" }}
                     >

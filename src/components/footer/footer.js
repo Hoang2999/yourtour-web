@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./footer.css";
 import "../grid.css";
+import hoang from "../../img/hoang.jpg"
+import phong from "../../img/phong.jpg"
+import phuc from "../../img/phuc.jpg"
+import quang from "../../img/quang.jpg"
 
 export default class Footer extends Component {
   render() {
@@ -17,7 +21,7 @@ export default class Footer extends Component {
               }}
             >
               <img
-                src={"img/hoang.jpg"}
+                src={hoang}
                 style={{
                   width: "60%",
                   height: "60%",
@@ -37,7 +41,7 @@ export default class Footer extends Component {
               }}
             >
               <img
-                src={"img/phong.jpg"}
+                src={phong}
                 style={{
                   width: "60%",
                   height: "60%",
@@ -57,7 +61,7 @@ export default class Footer extends Component {
               }}
             >
               <img
-                src={"img/phuc.jpg"}
+                src={phuc}
                 style={{
                   width: "60%",
                   height: "60%",
@@ -77,7 +81,7 @@ export default class Footer extends Component {
               }}
             >
               <img
-                src={"img/quang.jpg"}
+                src={quang}
                 style={{
                   width: "60%",
                   height: "60%",
