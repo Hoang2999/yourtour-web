@@ -7,6 +7,7 @@ import moreDetail from "../moredetail/moredetail";
 import tourGuide from "../tourguide-detail/tourguide";
 import ProfileUser from "../ProfileUser/ProfileUser";
 import payment from "../payment/payment";
+import hoster from "../hoster/hoster";
 import { Redirect, Route } from "react-router-dom";
 
 export default class Body extends Component {
@@ -21,6 +22,7 @@ export default class Body extends Component {
         <Route path="/tourguide" component={tourGuide} />
         <Route path="/profile" component={ProfileUser} />
         <Route path="/payment" component={payment} />
+        <Route path="/hoster" component={hoster} />
       </div>
     );
   }

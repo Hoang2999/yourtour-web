@@ -392,7 +392,7 @@ export default class Home extends Component {
         <div className="grid wide">
           <div className="grid wide">
             <div className="container-product3">
-              <h2>6 thành phố hàng đầu</h2>
+              <h2 className="container-product3-h2">6 thành phố hàng đầu</h2>
               <div
                 className="home-product3"
                 style={{

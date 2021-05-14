@@ -331,7 +331,7 @@
 }
 
 .home-product3 {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -339,13 +339,13 @@
     width: 100%;
 }
 
-.home-product3 h2 {
+.container-product3-h2 {
     font-size: 2.5rem;
     color: #4a4a4a;
     line-height: 2.5rem;
-    max-width: 380px;
+    max-width: 100%;
     font-weight: 800;
-    margin: 0;
+    margin: 32px 0 0 0;
 }
 
 .home-product3-body {

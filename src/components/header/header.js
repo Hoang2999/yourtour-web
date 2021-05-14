@@ -40,6 +40,7 @@ export default function Header() {
   }, []);
   auth.onAuthStateChanged((user) => {
     setProfile(user);
+    localStorage.setItem("currentUser", JSON.stringify(user));
   });
 
   return (
@@ -94,11 +95,17 @@ export default function Header() {
                       Become a host
                     </a>
                   </li>
-                  <Link to="/login" className="header__navbar-item header__navbar-link">
+                  <Link
+                    to="/login"
+                    className="header__navbar-item header__navbar-link"
+                  >
                     Log in
                   </Link>
 
-                  <Link to="/register" className="header__navbar-item header__navbar-link">
+                  <Link
+                    to="/register"
+                    className="header__navbar-item header__navbar-link"
+                  >
                     Sign up
                   </Link>
                 </ul>

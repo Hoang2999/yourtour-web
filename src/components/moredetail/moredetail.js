@@ -4,20 +4,37 @@ import "../grid.css";
 import { Link } from "react-router-dom";
 import hoang from "../../img/hoang.jpg";
 import StarRatings from 'react-star-ratings';
+import history from '../../history';
 export default class moreDetail extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       item: this.props.location.myCustomProps,
-      rating: 0
+      rating: 0,
+      currentUser: JSON.parse(localStorage.getItem("currentUser"))
     };
+    this.handlePayment = this.handlePayment.bind(this);
   }
   changeRating(newRating, name) {
     this.setState({
       rating: newRating,
     });
   }
+
+  handlePayment() {
+    if(this.state.currentUser) {
+      console.log('payment')
+      history.push("/payment")
+      window.location.reload()
+    } else {
+      console.log('login')
+      history.push("/login");
+      window.location.reload()
+    }
+   
+  }
+
   render() {
     const item = this.state.item
     console.log("item",item)
@@ -328,9 +345,37 @@ export default class moreDetail extends Component {
                   isAggregateRating
                 />
               </div>
-              <Link to="/payment" className="booknow__btn">
+              {/* <div className="calendar__container">
+                <a
+                  className="header__search-input-wrap1"
+                  onClick={() => setToggleCalendar(!toggleCalendar)}
+                >
+                  <div className="header__search-input-text">
+                    <div className="header__search-icon-text">
+                      <i className="header__search-icon fas fa-table"></i>
+                      <span
+                        className="header__search-input"
+                        style={{ color: "grey" }}
+                      >
+                        Enter date
+                      </span>
+                    </div>
+                    <i className="header__search-icon fas fa-chevron-down"></i>
+                  </div>
+                </a>
+                <div ref={wrapperRef}>
+                  {toggleCalendar ? (
+                    <Calendar
+                      className="header__search-history"
+                      onChange={onChange}
+                      value={value}
+                    />
+                  ) : null}
+                </div>
+              </div> */}
+              <button onClick={this.handlePayment} className="booknow__btn">
                 Đặt chuyến đi
-              </Link>
+              </button>
             </div>
           </div>
         </div>
