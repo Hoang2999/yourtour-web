@@ -3,17 +3,23 @@ import { getCitiesInCountry } from "../../firebase";
 import "./home.css";
 import "../grid.css";
 import { Link } from "react-router-dom";
+import Spinner from "react-spinner-material";
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
+      loading: false,
     };
   }
   componentDidMount() {
+    this.setState({
+      loading: true,
+    });
     getCitiesInCountry("countries/vietnam/cities").then((res) => {
       this.setState({
         data: res,
+        loading: false,
       });
     });
   }
@@ -401,7 +407,7 @@ export default class Home extends Component {
                   justifyContent: "space-between",
                 }}
               >
-                {this.state.data.length > 0 &&
+                {!this.state.loading ? (
                   this.state.data.map((item, index) => (
                     <Link
                       to={`/details/${item.id}`}
@@ -434,7 +440,15 @@ export default class Home extends Component {
                         </div>
                       </div>
                     </Link>
-                  ))}
+                  ))
+                ) : (
+                  <Spinner
+                    size={120}
+                    spinnerColor={"#333"}
+                    spinnerWidth={2}
+                    visible={true}
+                  />
+                )}
               </div>
             </div>
           </div>

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import "./payment.css";
 import "../grid.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import meo from "../../img/meobeo.jpg";
 
-export default class Payment extends Component {
-  render() {
+export default function Payment(){
+    const query = new URLSearchParams(useLocation().search)
+    const total = query.get('total')
+    console.log(total)
+
     return (
       <div>
         <div className="grid wide">
@@ -58,6 +61,5 @@ export default class Payment extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
-}

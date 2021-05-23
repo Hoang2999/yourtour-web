@@ -12,7 +12,6 @@ export default function Header() {
   const [toggleCalendar, setToggleCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
   const [profile, setProfile] = useState(null);
-
   console.log(value);
 
   useEffect(() => {

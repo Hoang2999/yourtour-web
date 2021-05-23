@@ -45,12 +45,11 @@
 
 .moredetail__resons {
     color: var(--primary-color);
-    font-size: 1.1rem;
     display: block;
 }
 
 .moredetail__reasons-body {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     margin-left: 6px;
 }
@@ -281,7 +280,6 @@
     padding: 10px 15px;
     box-shadow: 0 6px 16px 0 rgb(0 0 0 / 15%);
     border-radius: .5rem;
-    overflow: hidden;
     display: block;
     transition: box-shadow .13s ease-in;
     text-decoration: none;
@@ -315,4 +313,62 @@
     font-size: 1.4rem;
     max-width: 116px;
     text-align: center;
+}
+
+.header__search-input-wrap1:hover .header__search-history1 {
+    display: block;
+}
+
+
+/* Search history */
+
+.header__search-history1 {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    max-width: 600px !important;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgb(189, 189, 189);
+    text-align: left;
+    z-index: 9999;
+    /* display: none; */
+}
+
+.header__navbar-user-menu1 {
+    /* width: 100%; */
+    position: absolute;
+    z-index: 1;
+    padding-left: 0;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none;
+    box-shadow: 0 1px 2px #e0e0e0;
+    display: none;
+    text-decoration: none;
+}
+
+.header__search-input-people:focus .header__navbar-user-menu1 {
+    display: block;
+}
+
+.select__time {
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    margin: 4px;
+    font-size: 1.2rem;
+}
+
+.select__time1 {
+    display: block;
+    margin: 4px 0;
+    width: 173px;
+    background-color: white;
+    border: 1px solid #333;
+    height: 50px;
+    cursor: pointer;
 }

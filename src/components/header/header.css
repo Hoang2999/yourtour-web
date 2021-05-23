@@ -84,6 +84,7 @@
     margin: 12px 0;
     font-weight: 400;
     display: block;
+    width: 100%;
 }
 
 .header__search-btn {
