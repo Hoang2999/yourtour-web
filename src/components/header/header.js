@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./header.css";
-import "../grid.css";
-import { Link } from "react-router-dom";
-import Calendar from "react-calendar";
-import { auth } from "../../firebase";
-import ProfilePage from "../Profile/ProfilePage";
+import React, { useState, useEffect, useRef } from 'react';
+import './header.css';
+import '../grid.css';
+import { Link } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import { auth } from '../../firebase';
+import ProfilePage from '../profile/ProfilePage';
 
 export default function Header() {
   const wrapperRef = useRef(null);
@@ -21,10 +21,10 @@ export default function Header() {
       }
     }
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [wrapperRef]);
 
@@ -39,15 +39,15 @@ export default function Header() {
   }, []);
   auth.onAuthStateChanged((user) => {
     setProfile(user);
-    localStorage.setItem("currentUser", JSON.stringify(user));
+    localStorage.setItem('currentUser', JSON.stringify(user));
   });
 
   return (
     <div className="app">
       <div className="main">
         <img
-          src={"img/img" + number + ".jpg"}
-          style={{ width: "100%" }}
+          src={'img/img' + number + '.jpg'}
+          style={{ width: '100%' }}
           alt=""
         />
         <header className="header">
@@ -137,7 +137,7 @@ export default function Header() {
                       <i className="header__search-icon fas fa-table"></i>
                       <span
                         className="header__search-input"
-                        style={{ color: "grey" }}
+                        style={{ color: 'grey' }}
                       >
                         Enter date
                       </span>
@@ -159,7 +159,7 @@ export default function Header() {
                 <div className="header__search-input-text1">
                   <span
                     className="header__search-input1"
-                    style={{ color: "grey" }}
+                    style={{ color: 'grey' }}
                   >
                     4 People
                   </span>
