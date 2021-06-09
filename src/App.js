@@ -6,11 +6,13 @@ import {
   Redirect,
 } from "react-router-dom";
 import history from "./history";
+import ListChat from "./components/chat/ListChat";
 function App() {
   return (
     <Router history={history}>
       <div>
         <Switch>
+        <Route path="/listchat" exact component={ListChat} />
           <Redirect exact from="/" to="/home" />
           <Route path="/">
             <Layout />

@@ -59,7 +59,7 @@ import {
                         width="100%"
                       />
                       <a href="#" className="details__container-link">
-                        Tận hưởng Hanoi với {item.tourguideName}
+                        Tận hưởng {item.cityID} với {item.tourguideName}
                       </a>
                       <div className="details__container-title">
                         <div className="details__container-desc">

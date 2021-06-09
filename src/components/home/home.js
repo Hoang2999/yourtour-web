@@ -31,10 +31,10 @@ export default class Home extends Component {
         <div className="grid wide">
           <div className="reason-tour">
             <div className="container__text">
-              <h4>Prioritizing safety</h4>
+              <h4>Ưu tiên an toàn</h4>
               <h2>
-                Withlocals experiences are
-                <span className="container__text-span"> always</span>
+                Những trải nghiệm du lịch của
+                <span className="container__text-span"> bạn</span>
               </h2>
             </div>
             <div className="row sm-gutter app__content">
@@ -43,11 +43,10 @@ export default class Home extends Component {
                   <img src={"img/img4.jpg"} style={{ width: "150px" }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
-                      1 | Always private & personal
+                      1 | Luôn riêng tư và cá nhân
                     </h1>
                     <p className="app__content-text-body">
-                      No strangers, just you. Fully customize your trip to your
-                      needs.
+                      Không có người lạ, chỉ có bạn. Hoàn toàn tùy chỉnh chuyến đi của bạn theo nhu cầu của bạn.
                     </p>
                   </div>
                 </div>
@@ -57,11 +56,10 @@ export default class Home extends Component {
                   <img src={"img/img5.jpg"} style={{ width: "150px" }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
-                      2 | Guided by local experts
+                      2 | Được hướng dẫn bởi các chuyên gia trong nước
                     </h1>
                     <p className="app__content-text-body">
-                      From historical facts to the most up-to-date health
-                      regulations.
+                      Từ thực tế lịch sử đến các quy định y tế cập nhật nhất.
                     </p>
                   </div>
                 </div>
@@ -71,11 +69,10 @@ export default class Home extends Component {
                   <img src={"img/img6.jpg"} style={{ width: "150px" }}></img>
                   <div className="app__content-text">
                     <h1 className="app__content-text-heading">
-                      3 | Without crowds
+                      3 | Không có đám đông
                     </h1>
                     <p className="app__content-text-body">
-                      Experiences designed to take you away from the crowds
-                      towards authentic local spots.
+                      Trải nghiệm được thiết kế để đưa bạn thoát khỏi đám đông để đến các địa điểm địa phương đích thực.
                     </p>
                   </div>
                 </div>
@@ -83,12 +80,12 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="home-product">
-            <h2>Top Withlocals destinations</h2>
+            <h2>Các điểm đến hàng đầu với địa phương</h2>
             <div className="row sm-gutter home-product-cover">
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img1.jpg"}
+                    src={"img/da-lat-tu-tren-cao.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -98,18 +95,16 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-product-content">
-                    <div className="home-product-title">the Netherlands</div>
+                    <div className="home-product-title">Đà lạt</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
+                      TÌNH TRẠNG COVID 19:{" "}
                     </span>{" "}
-                    Open for travelers from EU and Schengen countries.
+                      Mở cửa cho khách du lịch từ các nước đã tiêm vaccine.
                     <p className="home-product-desc">
-                      Welcoming you with a friendly smile and good spirit! The
-                      locals of the Netherlands are eager to show you the best
-                      their country has to offer.
+                      Chào đón bạn bằng nụ cười thân thiện và tinh thần tốt! Người dân địa phương của Đà Lạt rất háo hức cho bạn thấy những gì tốt nhất mà đất nước của họ mang lại.
                     </p>
                     <a href="#" className="home-product-link">
-                      View all things to do in the Netherlands
+                      Xem tất cả mọi thử khi đến Đà Lạt
                     </a>
                   </div>
                 </div>
@@ -117,7 +112,7 @@ export default class Home extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img1.jpg"}
+                    src={"img/Da-nang.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -127,18 +122,16 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-product-content">
-                    <div className="home-product-title">the Netherlands</div>
+                    <div className="home-product-title">Đà Nẵng</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
+                      TÌNH TRẠNG COVID 19:{" "}
                     </span>{" "}
-                    Open for travelers from EU and Schengen countries.
+                      Mở cửa cho khách du lịch từ các nước đã tiêm vaccine.
                     <p className="home-product-desc">
-                      Welcoming you with a friendly smile and good spirit! The
-                      locals of the Netherlands are eager to show you the best
-                      their country has to offer.
+                      Chào đón bạn bằng nụ cười thân thiện và tinh thần tốt! Người dân địa phương của Đà Nẵng rất háo hức cho bạn thấy những gì tốt nhất mà đất nước của họ mang lại.
                     </p>
                     <a href="#" className="home-product-link">
-                      View all things to do in the Netherlands
+                      Xem tất cả mọi thử khi đến Đà Nẵng
                     </a>
                   </div>
                 </div>
@@ -146,7 +139,7 @@ export default class Home extends Component {
               <div className="col l-4 m-4 c-6">
                 <div className="home-product-body">
                   <img
-                    src={"img/img1.jpg"}
+                    src={"img/Sapa1.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -156,18 +149,16 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-product-content">
-                    <div className="home-product-title">the Netherlands</div>
+                    <div className="home-product-title">Sapa</div>
                     <span className="home-product-status">
-                      COVID 19 STATUS :{" "}
+                      TÌNH TRẠNG COVID 19:{" "}
                     </span>{" "}
-                    Open for travelers from EU and Schengen countries.
+                      Mở cửa cho khách du lịch từ các nước đã tiêm vaccine.
                     <p className="home-product-desc">
-                      Welcoming you with a friendly smile and good spirit! The
-                      locals of the Netherlands are eager to show you the best
-                      their country has to offer.
+                      Chào đón bạn bằng nụ cười thân thiện và tinh thần tốt! Người dân địa phương của Sapa rất háo hức cho bạn thấy những gì tốt nhất mà đất nước của họ mang lại.
                     </p>
                     <a href="#" className="home-product-link">
-                      View all things to do in the Netherlands
+                      Xem tất cả mọi thử khi đến Sapa
                     </a>
                   </div>
                 </div>
@@ -175,16 +166,16 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="home-formality">
-            <h2>Explore Withlocals</h2>
+            <h2>Khám phá chuyến tham quan của bạn</h2>
             <p className="home-formality-p">
-              All of our tours and activities are: • Private • Personalized •
-              With the local of your choice
+              Tất cả các chuyến tham quan và hoạt động của chúng tôi là: • Riêng tư • Cá nhân hóa •
+              Với địa phương của sự lựa chọn của bạn
             </p>
             <div className="row sm-gutter home-formality-cover">
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/amthuc.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -194,14 +185,14 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Food tour</div>
+                    <div className="home-formality-title">Du lịch ẩm thực</div>
                   </div>
                 </div>
               </a>
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/dibo.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -211,14 +202,14 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Walking tour</div>
+                    <div className="home-formality-title">Đi bộ tham quan</div>
                   </div>
                 </div>
               </a>
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/dangoai.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -228,14 +219,14 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Day trips</div>
+                    <div className="home-formality-title">Buổi dã ngoại</div>
                   </div>
                 </div>
               </a>
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/giadinh.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -245,14 +236,14 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Family friendly</div>
+                    <div className="home-formality-title">Gia đình thân thiện</div>
                   </div>
                 </div>
               </a>
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/dulichdem.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -262,14 +253,14 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Night tour</div>
+                    <div className="home-formality-title">Du lịch đêm</div>
                   </div>
                 </div>
               </a>
               <a href="#" className="col l-2 m-4 c-6 home-formality-container">
                 <div className="home-formality-body">
                   <img
-                    src={"img/img3.jpg"}
+                    src={"img/xedap.jpg"}
                     style={{
                       width: "100%",
                       backgroundPosition: "center",
@@ -279,7 +270,7 @@ export default class Home extends Component {
                     }}
                   ></img>
                   <div className="home-formality-content">
-                    <div className="home-formality-title">Bike tour</div>
+                    <div className="home-formality-title">Bằng xe đạp</div>
                   </div>
                 </div>
               </a>
@@ -335,8 +326,8 @@ export default class Home extends Component {
         </div>
         <div className="grid wide">
           <div className="home-product2">
-            <h2>Travel safely & stay informed</h2>
-            <h4>Read how our locals are ensuring Covid-19 proof experiences</h4>
+            <h2>TĐi du lịch an toàn & cập nhật thông tin</h2>
+            <h4>Đọc cách người dân địa phương của chúng tôi đảm bảo trải nghiệm bằng chứng Covid-19</h4>
             <div className="row sm-gutter home-product2-cover">
               <div className="col l-4 m-4 c-6">
                 <div className="home-product2-body">
@@ -352,15 +343,13 @@ export default class Home extends Component {
                   ></img>
                   <div className="home-product2-content">
                     <div className="home-product2-title">
-                      About Withlocals Experiences
+                      Về trải nghiệm chuyến tham quan của bạn
                     </div>
                     <p className="home-product2-desc">
-                      From less crowded routes to easier personalization, we
-                      have adjusted our experiences according to the new
-                      situation to better serve the needs of our guests.
+                      Từ các tuyến đường ít đông đúc hơn để cá nhân hóa dễ dàng hơn, chúng tôi đã điều chỉnh trải nghiệm của mình theo tình hình mới để phục vụ tốt hơn nhu cầu của khách.
                     </p>
                     <a href="#" className="home-product2-link">
-                      Read full article
+                      Đọc toàn bộ bài báo
                     </a>
                   </div>
                 </div>
@@ -379,15 +368,15 @@ export default class Home extends Component {
                   ></img>
                   <div className="home-product2-content">
                     <div className="home-product2-title">
-                      General safety information
+                      Thông tin chung về an toàn
                     </div>
                     <p className="home-product2-desc">
-                      Our hosts are conscious about the current Covid-19
-                      situation. Read more about the safety measure they take to
-                      ensure your comfort.
+                      Máy chủ của chúng tôi có ý thức về Covid-19 hiện tại
+                      tình hình. Đọc thêm về các biện pháp an toàn mà họ thực hiện
+                      đảm bảo sự thoải mái của bạn.
                     </p>
                     <a href="#" className="home-product2-link">
-                      Read full article
+                      Đọc toàn bộ bài báo
                     </a>
                   </div>
                 </div>
@@ -417,9 +406,8 @@ export default class Home extends Component {
                       <div className="row sm-gutter home-product3-cover">
                         <div className="home-product3-body">
                           <div className="home-product3-content">
-                            <div className="home-product3-title">{`${
-                              index + 1
-                            } | ${item.name}`}</div>
+                            <div className="home-product3-title">{`${index + 1
+                              } | ${item.name}`}</div>
                             <p className="home-product3-desc">
                               {item.description}
                             </p>

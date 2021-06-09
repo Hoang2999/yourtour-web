@@ -42,6 +42,7 @@ export default function Header() {
     localStorage.setItem("currentUser", JSON.stringify(user));
   });
 
+
   return (
     <div className="app">
       <div className="main">
@@ -113,9 +114,9 @@ export default function Header() {
           </nav>
           <div className="header__container">
             <div className="header__text">
-              <h1 className="header__title">Avoid the Crowds</h1>
+              <h1 className="header__title">Tránh đám đông</h1>
               <h4 className="header__content">
-                Book private tours & activities with locals worldwide
+                Đặt các chuyến tham quan và hoạt động riêng với người dân địa phương trên toàn thế giới
               </h4>
             </div>
             <div className="header__search">
@@ -127,67 +128,6 @@ export default function Header() {
                   placeholder="Where are you going?"
                 />
               </div>
-              <div className="calendar__container">
-                <a
-                  className="header__search-input-wrap1"
-                  onClick={() => setToggleCalendar(!toggleCalendar)}
-                >
-                  <div className="header__search-input-text">
-                    <div className="header__search-icon-text">
-                      <i className="header__search-icon fas fa-table"></i>
-                      <span
-                        className="header__search-input"
-                        style={{ color: "grey" }}
-                      >
-                        Enter date
-                      </span>
-                    </div>
-                    <i className="header__search-icon fas fa-chevron-down"></i>
-                  </div>
-                </a>
-                <div ref={wrapperRef}>
-                  {toggleCalendar ? (
-                    <Calendar
-                      className="header__search-history"
-                      onChange={onChange}
-                      value={value}
-                    />
-                  ) : null}
-                </div>
-              </div>
-              <button className="header__search-input-people">
-                <div className="header__search-input-text1">
-                  <span
-                    className="header__search-input1"
-                    style={{ color: "grey" }}
-                  >
-                    4 People
-                  </span>
-                  <i className="header__search-icon fas fa-chevron-down"></i>
-                </div>
-                <div className="header__navbar-user-menu">
-                  <div className="header__navbar-user-item">
-                    <div className="header__navbar-user-menu-people">
-                      Adults
-                    </div>
-                    <div className="header__navbar-user-menu-count">
-                      <i className="header__navbar-user-icon fas fa-minus"></i>
-                      <span> 4 </span>
-                      <i className="header__navbar-user-icon fas fa-plus"></i>
-                    </div>
-                  </div>
-                  <div className="header__navbar-user-item">
-                    <div className="header__navbar-user-menu-people">
-                      Children
-                    </div>
-                    <div className="header__navbar-user-menu-count">
-                      <i className="header__navbar-user-icon fas fa-minus"></i>
-                      <span> 0 </span>
-                      <i className="header__navbar-user-icon fas fa-plus"></i>
-                    </div>
-                  </div>
-                </div>
-              </button>
               <button className="header__search-btn">
                 <span className="header__search-btn-icon">Search</span>
               </button>
