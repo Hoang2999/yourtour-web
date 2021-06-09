@@ -9,7 +9,7 @@ export default class tourGuide extends Component {
         {/* Information */}
         <div className="row sm-gutter container__detail-infor">
           <div className="col l-8">
-            <h1>Meet Hoang Phan, your local guide</h1>
+            <h1>Gặp gỡ Hoàng Phan, hướng dẫn viên địa phương của bạn</h1>
             <img
               src={"img/img11.jpg"}
               style={{
@@ -22,7 +22,7 @@ export default class tourGuide extends Component {
             <div className="container__tourguide-people">
               <div className="container__tourguide-name-exper">
                 <h1 className="container__tourguide-name">
-                  xin chào I'm Phuc, Food and fun lover
+                  xin chào I'm Hoang, Food and fun lover
                 </h1>
                 <span className="container__tourguide-language">
                   I speak: English, Vietnamese
@@ -40,20 +40,20 @@ export default class tourGuide extends Component {
                   </div>
                 </div>
               </div>
-              <button className="button__contact">Contact Phuc Huynh</button>
+              <button className="button__contact">Contact Hoang</button>
             </div>
             <div className="container__tourguide-about-me">
-              <h1 className="container__tourguide-name">About me</h1>
+              <h1 className="container__tourguide-name">Thông tin về tôi</h1>
               <p className="container__tourguide-desc">
-                I love to tell visitors with non-stop stories about my country
-                and my city where I was born and grew up. I will show you my
-                love towards Hanoi and Vietnam with the hope that you will fall
-                in love with my places and will come back again and again!
+                Tôi thích kể cho du khách những câu chuyện không ngừng về đất nước của tôi
+                và thành phố của tôi, nơi tôi sinh ra và lớn lên. Tôi sẽ cho bạn thấy của tôi
+                tình yêu đối với Hà Nội và Việt Nam với hy vọng rằng bạn sẽ gục ngã
+                yêu những nơi của tôi và sẽ quay lại nhiều lần!
               </p>
             </div>
             <div className="container__tourguide-reasons">
               <h1 className="container__tourguide-name">
-                5 reasons to pick me
+                5 lý do chọn tôi
               </h1>
               <div className="container__tourguide-logo-desc">
                 <svg
@@ -74,7 +74,7 @@ export default class tourGuide extends Component {
                   </g>
                 </svg>
                 <span className="container__tourguide-local">
-                  Creative Local
+                  Quảng cáo địa phương
                 </span>
               </div>
               <div className="container__tourguide-logo-desc">
@@ -96,7 +96,7 @@ export default class tourGuide extends Component {
                   </g>
                 </svg>
                 <span className="container__tourguide-local">
-                  English Teacher
+                  Giáo viên tiếng anh
                 </span>
               </div>
               <div className="container__tourguide-logo-desc">
@@ -117,7 +117,7 @@ export default class tourGuide extends Component {
                     ></path>
                   </g>
                 </svg>
-                <span className="container__tourguide-local">Kind Heart</span>
+                <span className="container__tourguide-local">Trái tim nhân hậu</span>
               </div>
               <div className="container__tourguide-logo-desc">
                 <svg
@@ -137,7 +137,7 @@ export default class tourGuide extends Component {
                     ></path>
                   </g>
                 </svg>
-                <span className="container__tourguide-local">Loves Kids</span>
+                <span className="container__tourguide-local">Yêu thương trẻ em</span>
               </div>
               <div className="container__tourguide-logo-desc">
                 <svg
@@ -158,7 +158,7 @@ export default class tourGuide extends Component {
                   </g>
                 </svg>
                 <span className="container__tourguide-local">
-                  Fun Motivator
+                  Động lực thú vị
                 </span>
               </div>
             </div>

@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./moredetail.css";
 import "../grid.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import hoang from "../../img/hoang.jpg";
 import Calendar from "react-calendar";
 import StarRatings from "react-star-ratings";
 import Collapse from "@kunukn/react-collapse";
-import history from "../../history";
+import history from "../../history"
+import { firestore } from "../../firebase";
 export default function MoreDetail(props) {
+  let {id}  = useParams()
   const wrapperRef = useRef(null);
-  const [item, setItem] = useState(props.location.myCustomProps);
+  const [ item, setItem] = useState(null);
   const [rating, setRating] = useState(props.location.myCustomProps);
   const [toggleCalendar, setToggleCalendar] = useState(false);
   const [value, onChange] = useState(new Date());
@@ -72,6 +74,20 @@ export default function MoreDetail(props) {
     },
   ];
 
+
+  useEffect(()=>{
+    async function getData(){
+      console.log(id);
+      await firestore.collection('tours').doc(id).get()
+      .then(item => {
+              setItem(item.data());
+      })
+    }
+    getData()
+
+
+  },[])
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
@@ -95,8 +111,7 @@ export default function MoreDetail(props) {
 
     if (currentUser) {
       console.log("payment");
-      history.push(`/payment?total=${total}`);
-      window.location.reload();
+      history.push(`/payment?total=${total}&time=${selectTime}`);
     } else {
       console.log("login");
       history.push("/login");

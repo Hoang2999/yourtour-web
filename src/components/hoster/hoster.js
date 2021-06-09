@@ -3,6 +3,7 @@ import "../grid.css";
 import "./hoster.css";
 import a from "../../img/a.jpg";
 import b from "../../img/b.jpg";
+import { Link } from "react-router-dom";
 
 export default class hoster extends Component {
     render() {
@@ -159,7 +160,7 @@ export default class hoster extends Component {
                     </div>
                   </li>
                 </ul>
-                <a className="GetStarted-7z2kJ" href="/">
+                <a className="GetStarted-7z2kJ" href='/answer'>
                   <button className="Button-2iSbC Inverted-2S2Z-">
                     Bắt đầu nào!
                   </button>

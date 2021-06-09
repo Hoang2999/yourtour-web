@@ -42,6 +42,7 @@ export default function Header() {
     localStorage.setItem('currentUser', JSON.stringify(user));
   });
 
+
   return (
     <div className="app">
       <div className="main">
@@ -113,9 +114,9 @@ export default function Header() {
           </nav>
           <div className="header__container">
             <div className="header__text">
-              <h1 className="header__title">Avoid the Crowds</h1>
+              <h1 className="header__title">Tránh đám đông</h1>
               <h4 className="header__content">
-                Book private tours & activities with locals worldwide
+                Đặt các chuyến tham quan và hoạt động riêng với người dân địa phương trên toàn thế giới
               </h4>
             </div>
             <div className="header__search">
@@ -127,6 +128,7 @@ export default function Header() {
                   placeholder="Where are you going?"
                 />
               </div>
+
               <div className="calendar__container">
                 <a
                   className="header__search-input-wrap1"
@@ -188,6 +190,7 @@ export default function Header() {
                   </div>
                 </div>
               </button>
+
               <button className="header__search-btn">
                 <span className="header__search-btn-icon">Search</span>
               </button>
