@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./header.css";
-import "../grid.css";
-import { Link } from "react-router-dom";
-import Calendar from "react-calendar";
-import { auth } from "../../firebase";
-import ProfilePage from "../Profile/ProfilePage";
+import React, { useState, useEffect, useRef } from 'react';
+import './header.css';
+import '../grid.css';
+import { Link } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import { auth } from '../../firebase';
+import ProfilePage from '../profile/ProfilePage';
 
 export default function Header() {
   const wrapperRef = useRef(null);
@@ -21,10 +21,10 @@ export default function Header() {
       }
     }
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [wrapperRef]);
 
@@ -39,7 +39,7 @@ export default function Header() {
   }, []);
   auth.onAuthStateChanged((user) => {
     setProfile(user);
-    localStorage.setItem("currentUser", JSON.stringify(user));
+    localStorage.setItem('currentUser', JSON.stringify(user));
   });
 
 
@@ -47,8 +47,8 @@ export default function Header() {
     <div className="app">
       <div className="main">
         <img
-          src={"img/img" + number + ".jpg"}
-          style={{ width: "100%" }}
+          src={'img/img' + number + '.jpg'}
+          style={{ width: '100%' }}
           alt=""
         />
         <header className="header">
@@ -128,6 +128,69 @@ export default function Header() {
                   placeholder="Where are you going?"
                 />
               </div>
+
+              <div className="calendar__container">
+                <a
+                  className="header__search-input-wrap1"
+                  onClick={() => setToggleCalendar(!toggleCalendar)}
+                >
+                  <div className="header__search-input-text">
+                    <div className="header__search-icon-text">
+                      <i className="header__search-icon fas fa-table"></i>
+                      <span
+                        className="header__search-input"
+                        style={{ color: 'grey' }}
+                      >
+                        Enter date
+                      </span>
+                    </div>
+                    <i className="header__search-icon fas fa-chevron-down"></i>
+                  </div>
+                </a>
+                <div ref={wrapperRef}>
+                  {toggleCalendar ? (
+                    <Calendar
+                      className="header__search-history"
+                      onChange={onChange}
+                      value={value}
+                    />
+                  ) : null}
+                </div>
+              </div>
+              <button className="header__search-input-people">
+                <div className="header__search-input-text1">
+                  <span
+                    className="header__search-input1"
+                    style={{ color: 'grey' }}
+                  >
+                    4 People
+                  </span>
+                  <i className="header__search-icon fas fa-chevron-down"></i>
+                </div>
+                <div className="header__navbar-user-menu">
+                  <div className="header__navbar-user-item">
+                    <div className="header__navbar-user-menu-people">
+                      Adults
+                    </div>
+                    <div className="header__navbar-user-menu-count">
+                      <i className="header__navbar-user-icon fas fa-minus"></i>
+                      <span> 4 </span>
+                      <i className="header__navbar-user-icon fas fa-plus"></i>
+                    </div>
+                  </div>
+                  <div className="header__navbar-user-item">
+                    <div className="header__navbar-user-menu-people">
+                      Children
+                    </div>
+                    <div className="header__navbar-user-menu-count">
+                      <i className="header__navbar-user-icon fas fa-minus"></i>
+                      <span> 0 </span>
+                      <i className="header__navbar-user-icon fas fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              </button>
+
               <button className="header__search-btn">
                 <span className="header__search-btn-icon">Search</span>
               </button>
