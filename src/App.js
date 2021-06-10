@@ -10,7 +10,7 @@ import ListChat from "./components/chat/ListChat";
 function App() {
   return (
     <Router history={history}>
-      <div>
+      <div style={{marginTop:50}}>
         <Switch>
         <Route path="/listchat" exact component={ListChat} />
           <Redirect exact from="/" to="/home" />

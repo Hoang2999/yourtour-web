@@ -341,57 +341,6 @@ export default function MoreDetail(props) {
                   ))}
                 </div>{" "}
               </div>
-              <div className="moredetail__comments">
-                <h1 className="moredetail__review"> Reviews </h1>{" "}
-                <div className="row sm-gutter moredetail__contribute">
-                  <div className="col l-8">
-                    <div className="moredetails__avatar">
-                      <img
-                        src={hoang}
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                        }}
-                      />{" "}
-                      <div className="moredetails__infor">
-                        <div className="moredetails__name"> Hieu </div>{" "}
-                        <div className="moredetails__home-product-item__rating">
-                          <StarRatings
-                            rating={item.avgRating}
-                            starRatedColor="var(--primary-color)"
-                            numberOfStars={5}
-                            name="rating"
-                            starDimension="20px"
-                            starSpacing="0"
-                            isAggregateRating
-                          />
-                          <span className="moredetails__about">
-                            (About local{" "}
-                            <Link to="/tourguide"> {item.tourguideName} </Link>){" "}
-                          </span>{" "}
-                        </div>{" "}
-                        <span className="moredetails__date">
-                          28 March 2020{" "}
-                        </span>{" "}
-                      </div>{" "}
-                    </div>{" "}
-                  </div>{" "}
-                  <div className="col l-8">
-                    <p className="moredetail__feedback">
-                      Hoang was amazing!The tour was a good pace and took us to
-                      lots of local places we would never have found
-                      ourselves.There was LOTS of food and we were all stuffed
-                      full of delicious local cuisine by the end of the day.As a
-                      group we all actually live in Hanoi but wanted a bit more
-                      of a sense of the old quarter and Anne provided exactly
-                      that.Her English is amazing!And she was super friendly and
-                      made us all feel very welcome and looked after all
-                      day.Thank you Hoang☺️{" "}
-                    </p>{" "}
-                  </div>{" "}
-                </div>{" "}
-              </div>{" "}
             </>
           )}{" "}
         </div>

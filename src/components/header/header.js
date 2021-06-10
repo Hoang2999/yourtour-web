@@ -46,13 +46,8 @@ export default function Header() {
   return (
     <div className="app">
       <div className="main">
-        <img
-          src={"img/img" + number + ".jpg"}
-          style={{ width: "100%" }}
-          alt=""
-        />
-        <header className="header">
-          <nav className="header__navbar">
+        <header className="header_container">
+          <div className="header__navbar">
             <div className="header__logo hide-on-tablet">
               <a href="/home" className="header__logo-link">
                 <svg
@@ -111,27 +106,6 @@ export default function Header() {
                 </ul>
               </>
             )}
-          </nav>
-          <div className="header__container">
-            <div className="header__text">
-              <h1 className="header__title">Tránh đám đông</h1>
-              <h4 className="header__content">
-                Đặt các chuyến tham quan và hoạt động riêng với người dân địa phương trên toàn thế giới
-              </h4>
-            </div>
-            <div className="header__search">
-              <div className="header__search-input-wrap">
-                <i className="header__search-icon fas fa-search"></i>
-                <input
-                  type="text"
-                  className="header__search-input"
-                  placeholder="Where are you going?"
-                />
-              </div>
-              <button className="header__search-btn">
-                <span className="header__search-btn-icon">Search</span>
-              </button>
-            </div>
           </div>
         </header>
       </div>

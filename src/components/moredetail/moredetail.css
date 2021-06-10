@@ -276,7 +276,7 @@
     background-color: var(--white-color);
     position: -webkit-sticky;
     position: sticky;
-    top: 0px;
+    top: 50px;
     padding: 10px 15px;
     box-shadow: 0 6px 16px 0 rgb(0 0 0 / 15%);
     border-radius: .5rem;
