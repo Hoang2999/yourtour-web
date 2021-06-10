@@ -1,106 +1,128 @@
 .details__container-list {
-    /* padding: 15px; */
+  /* padding: 15px; */
+}
+
+.detail__click-heading {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 600;
+  display: block;
+}
+
+.detail__click-item {
+  display: flex;
+}
+
+.detail__click-link {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  line-height: 1.4rem;
+  margin-top: 1px;
+  margin-right: 4px;
 }
 
 .details__container-item {
-    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 15%);
-    border-radius: .5rem;
-    overflow: hidden;
-    display: block;
-    transition: box-shadow .13s ease-in;
-    margin: 2rem 1.5rem 2rem 0;
-    cursor: pointer;
-    text-decoration: none;
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 15%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: block;
+  transition: box-shadow 0.13s ease-in;
+  margin: 2rem 1.5rem 2rem 0;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .details__container-item:hover {
-    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 25%);
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 25%);
 }
 
 .details__container-title {
-    display: flex;
-    align-items: center;
-    padding: 15px 4px 0 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px 4px 0 15px;
 }
 
 .details__container-food {
-    padding: 0 0 0 4px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #0d1318;
+  padding: 0 0 0 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d1318;
 }
 
 .details__container-desc {
-    padding-right: 3px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #4a4a4a;
+  padding-right: 3px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4a4a4a;
 }
 
 .details__container-link {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: underline;
-    display: inline-block;
-    padding: 10px 0 0 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: underline;
+  display: inline-block;
+  padding: 10px 0 0 4px;
 }
 
 .details__container-hour {
-    padding-left: 4px;
-    font-size: 1rem;
-    color: gray;
-}
-
-.home-product-item__match {}
-
-.home-product-item__action {
-    margin: 6px 10px 0;
-}
-
-.home-product-item__like--liked .home-product-item__like-icon-fill {
-    display: inline-block;
-}
-
-.home-product-item__like--liked .home-product-item__like-icon-empty {
-    display: none;
-}
-
-.home-product-item__rating {
-    font-size: 1rem;
-    /* transform: scale(0.8); */
-    padding: 4px;
-    transform-origin: right;
-    color: #d5d5d5;
-    /* margin: -1px 0 0 auto; */
-    padding-bottom: 30px;
-}
-
-.home-product-item__star-gold {
-    color: var(--star-gold-color);
+  padding-left: 4px;
+  font-size: 1rem;
+  color: gray;
 }
 
 .home-product-item__match {
-    margin-left: 3px;
+}
+
+.home-product-item__action {
+  margin: 6px 10px 0;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+  display: inline-block;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+  display: none;
+}
+
+.home-product-item__rating {
+  font-size: 1rem;
+  /* transform: scale(0.8); */
+  padding: 4px;
+  transform-origin: right;
+  color: #d5d5d5;
+  /* margin: -1px 0 0 auto; */
+  padding-bottom: 30px;
+}
+
+.home-product-item__star-gold {
+  color: var(--star-gold-color);
+}
+
+.home-product-item__match {
+  margin-left: 3px;
 }
 
 .home-product-item__img {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .details__container-title {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    padding: 4px 0 0 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  padding: 4px 0 0 4px;
 }
 
 .rating__name {
-    font-size: 1.3rem;
-    margin-left: 4px;
+  font-size: 1.3rem;
+  margin-left: 4px;
 }
