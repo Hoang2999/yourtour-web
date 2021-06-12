@@ -8,6 +8,7 @@ import meo from "../../img/meobeo.jpg";
 export default function Payment() {
   const query = new URLSearchParams(useLocation().search)
   const total = query.get('total')
+  const dateTime = query.get('time')
   function onToken(price) {
     return (token) => {
       let data = { price: parseInt(price) * 100, stripeTokenId: token.id }
@@ -37,7 +38,7 @@ export default function Payment() {
                     Hoang Phan
                     </Link>
                 </span>
-                <span className="payment__time">10:00 - 12 June</span>
+                <span className="payment__time">{ dateTime.substring(dateTime.lastIndexOf('/') + 1)}-{dateTime.substring(0 ,dateTime.lastIndexOf('/'))}</span>
               </div>
               <div className="payment__cat">
                 <img src={meo} style={{ width: "56%" }} />
@@ -48,21 +49,21 @@ export default function Payment() {
               <div className="payment__details">
                 <div className="payment__group">
                   <span className="payment__item">Tổng phụ</span>
-                  <span className="payment__price">$105</span>
+                  <span className="payment__price">${total}</span>
                 </div>
                 <div className="payment__group">
                   <span className="payment__item">Phí dịch vụ</span>
-                  <span className="payment__price">$4.5</span>
+                  <span className="payment__price">$0</span>
                 </div>
                 <div className="payment__group">
                   <span className="payment__item1">Tổng</span>
-                  <span className="payment__price1">$109.5</span>
+                  <span className="payment__price1">${total}</span>
                 </div>
               </div>
             </div>
             <div className="payment__now">
               <span className="payment__item2">Thanh toán ngay bây giờ</span>
-              <span className="payment__price2">$109.5</span>
+              <span className="payment__price2">${total}</span>
             </div>
             <div className="payment__choose">
               <h1 className="payment__choose-heading">Chọn thanh toán</h1>
@@ -75,7 +76,7 @@ export default function Payment() {
             <StripeCheckout
               token={onToken(total)}
               stripeKey='pk_test_51IEuuFE5tUNZ5fWU8JPgPbxIFWtzNjdXXAPJIYo5v0FLBdYjtJEXk0xyOoNP21qr5K5wSPsXQIpWp0AXzKk6cYmD00LrYN5j6R'
-              amount={parseInt(total)}
+              amount={parseInt(total) * 100}
             />
           </div>
         </div>
@@ -83,3 +84,4 @@ export default function Payment() {
     </div>
   )
 }
+

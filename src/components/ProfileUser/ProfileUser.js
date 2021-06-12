@@ -5,11 +5,11 @@ import { firestore } from "../../firebase";
 
 export default function ProfileUser() {
   let { uid } = JSON.parse(localStorage.getItem("currentUser"));
+  let [idProfile  ,serIdProfile] = useState('')
   let [user, setUser] = useState({});
+  console.log(user);
   let [loading, setLoading] = useState(false);
-  let inforUser = JSON.parse(localStorage.getItem("currentUser"))
-    ? JSON.parse(localStorage.getItem("currentUser"))
-    : null;
+
   function handleChangeFile() {
     let file = document.getElementById("upload");
     let image = URL.createObjectURL(file.files[0]);
@@ -17,17 +17,21 @@ export default function ProfileUser() {
   }
 
   useEffect(() => {
-    async function getData() {
-      await firestore
+    let dataRoot = []
+       firestore
         .collection("travelers")
-        .doc(uid)
         .get()
-        .then((item) => {
-          setUser(item.data());
+        .then((doc) => {
+          doc.forEach(i => {
+           let data =  i.data()
+           if(data.uID === uid){
+             serIdProfile(i.id)
+             dataRoot.push(data)
+           }
+          })
+          setUser(dataRoot[0]);
           setLoading(true);
         });
-    }
-    getData();
   }, []);
 
   function updateProfile() {
@@ -44,10 +48,10 @@ export default function ProfileUser() {
       reader.onloadend = async () => {
         await firestore
           .collection("travelers")
-          .doc(uid)
+          .doc(idProfile)
           .update({
             birthday: `${year}-${month}-${day}`,
-            gender,
+            gender : gender === "true" ? true : false,
             name: `${firstName} ${lastName}`,
             picture: reader.result,
           });
@@ -55,11 +59,12 @@ export default function ProfileUser() {
         window.location.reload();
       };
     } catch (err) {
+      console.log(err);
       alert("Fail");
     }
   }
 
-  if (inforUser) {
+  if (uid) {
     if (loading) {
       return (
         <div className="app__container">
@@ -126,7 +131,7 @@ export default function ProfileUser() {
                         user
                           ? user.name.substring(
                               0,
-                              inforUser.displayName.indexOf(" ")
+                              user.name.indexOf(" ")
                             )
                           : ""
                       }
@@ -141,7 +146,7 @@ export default function ProfileUser() {
                       defaultValue={
                         user
                           ? user.name.substring(
-                              inforUser.displayName.lastIndexOf(" ") + 1
+                            user.name.lastIndexOf(" ") + 1
                             )
                           : ""
                       }
@@ -229,3 +234,4 @@ export default function ProfileUser() {
     window.location.href = "/login";
   }
 }
+
