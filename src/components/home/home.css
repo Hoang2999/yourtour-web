@@ -82,6 +82,7 @@
     display: block;
     transition: box-shadow .13s ease-in;
     margin: 2rem 1.5rem 2rem 0;
+    cursor: pointer;
 }
 
 .home-product-body:hover {

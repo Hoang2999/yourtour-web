@@ -9,6 +9,7 @@ import ProfileUser from "../ProfileUser/ProfileUser";
 import payment from "../payment/payment";
 import hoster from "../hoster/hoster";
 import answer from "../answer/answer";
+import Uptour from "../Uptour/Uptour";
 import { Redirect, Route } from "react-router-dom";
 
 export default class Body extends Component {
@@ -25,6 +26,7 @@ export default class Body extends Component {
         <Route path="/payment" exact component={payment} />
         <Route path="/hoster" exact component={hoster} />
         <Route path="/answer" exact component={answer} />
+        <Route path="/uptour" exact component={Uptour} />
       </div>
     );
   }
